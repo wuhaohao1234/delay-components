@@ -1,9 +1,9 @@
-const delay = require('../dist/delay')
-
+const expect = require('chai').expect
+const delay = require('../dist/delay').default
 async function main() {
-    console.log('开始执行')
+    expect('测试开始').to.equal('测试开始')
     await delay(200)
-    console.log('测试结束')
+    expect('测试结束').to.equal('测试结束')
 }
 
 describe('ts-hi function test', () => {
